@@ -1,0 +1,8 @@
+@keyframes moveRed {
+    0% {
+        background-position: right;
+    }
+    100% {
+        background-position: left;
+    }
+}

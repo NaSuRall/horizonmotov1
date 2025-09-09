@@ -1,0 +1,139 @@
+@import url("variables.css");
+@import url("annimation.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logo {
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--background-color);
+    padding: 5px;
+}
+
+.video {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: #000;
+}
+
+.menu {
+    display: flex;
+    width: 100%;
+    height: 8%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--background-color);
+}
+.onglets {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.onglets a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    border-right: 1px solid #ccc;
+    height: 100%;
+
+    &:last-child {
+        border-right: none;
+    }
+}
+
+/* Effet de soulignement animé pour les boutons de navigation */
+.nav-btn {
+    position: relative;
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    color: #c00;
+    font-size: 1.1em;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.nav-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #c00;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.nav-btn:hover::after {
+    transform: scaleX(1);
+}
+
+/* footer */
+.footer {
+    width: 100%;
+    height: 100%;
+    background-color: var(--backfooter-color);
+    color: white;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+.footer a {
+    color: white;
+    text-decoration: underline;
+}
+.footer a:hover {
+    color: #ddd;
+}
+.logo-footer {
+    width: 100px;
+    height: auto;
+    margin-top: 10px;
+}
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
