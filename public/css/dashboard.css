@@ -25,6 +25,7 @@
 .right {
     width: 85%;
     background-color: var(--bg);
+    overflow: scroll;
 }
 .row:after {
     content: "";

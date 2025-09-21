@@ -11,10 +11,20 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+
+
+
+        // Decocher pour login pas obligatoire
+
+    /*
+        public function __construct()
+        {
+            $this->middleware('auth');
+        }
+    */
+
+
+
 
     /**
      * Show the application dashboard.

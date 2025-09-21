@@ -135,7 +135,7 @@
                     </a>
                 </div>
                 <div class="row">
-                    <a href="">
+                    <a href="{{ route('dashboard.user') }}">
                         <span class="icon-left"><i class="fa-solid fa-users"></i></span>
                         <span class="label">Utilisateurs</span>
                         <span class="icon-right"><i class="fa-solid fa-chevron-right"></i></span>
