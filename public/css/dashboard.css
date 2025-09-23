@@ -25,7 +25,10 @@
 .right {
     width: 85%;
     background-color: var(--bg);
-    overflow: scroll;
+    overflow: scroll; 
+}
+.right::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }
 .row:after {
     content: "";
@@ -74,6 +77,15 @@
     min-width: 250px;
     max-width: 100%;
     transition: box-shadow 0.2s;
+}
+.dashboard-card p{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2em;
+}
+.dashboard-card i {
+    color: rgb(0, 255, 0);
 }
 .dashboard-card:hover {
     box-shadow: 0 4px 16px rgba(200, 0, 0, 0.15);

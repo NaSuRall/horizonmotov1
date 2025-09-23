@@ -29,7 +29,11 @@
                             <td class="options">
                                 <button class="btn">Voir</button>
                                 <button class="btn">Éditer</button>
-                                <button class="btn">Supprimer</button>
+                                <form action="{{ route('user.destroy', $user->id) }}" method="POST" onsubmit="return confirm('Supprimer cet utilisateur ?')">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn" type="submit">Supprimer</button>
+                                </form>
                             </td>
                         </tr>
                         @endforeach
@@ -39,6 +43,5 @@
             </table>
         </div>
     </div>
-
 
 @endsection
