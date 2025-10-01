@@ -121,7 +121,7 @@
                     </a>
                 </div>
                 <div class="row">
-                    <a href="">
+                    <a href="{{ route('dashboard.marque') }}">
                         <span class="icon-left"><i class="fa-solid fa-tag"></i></span>
                         <span class="label">Marques</span>
                         <span class="icon-right"><i class="fa-solid fa-chevron-right"></i></span>

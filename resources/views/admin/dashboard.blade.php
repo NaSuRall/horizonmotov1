@@ -29,8 +29,14 @@
                 </div>
                 <div class="dashboard-row">
                     <div class="dashboard-card">
-                        <h3>Section Complète</h3>
-                        
+                        <h3>Nombre de marques </h3>
+                        <p>{{ $marquesCount }} <i class="fa-solid fa-server"></i></p>
+                        @foreach($marques as $marque)
+                        <div class="marque-item">
+                            <a href="{{ route('dashboard.marque', $marque->id) }}"> - {{ $marque->nom }}</a>
+                        </div>
+                            
+                        @endforeach
                     </div>
                 </div>
             </div>

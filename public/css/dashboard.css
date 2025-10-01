@@ -25,10 +25,10 @@
 .right {
     width: 85%;
     background-color: var(--bg);
-    overflow: scroll; 
+    overflow: scroll;
 }
 .right::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Edge */
+    display: none; /* Chrome, Safari, Edge */
 }
 .row:after {
     content: "";
@@ -78,7 +78,7 @@
     max-width: 100%;
     transition: box-shadow 0.2s;
 }
-.dashboard-card p{
+.dashboard-card p {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -92,5 +92,20 @@
 }
 .dashboard-card h3 {
     margin-bottom: 12px;
+    color: #c00;
+}
+.dashboard-card .marque-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+.dashboard-card a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1em;
+}
+.dashboard-card a:hover {
+    text-decoration: underline;
     color: #c00;
 }
