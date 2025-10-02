@@ -33,6 +33,26 @@
                 </div>
             </div>
         </main>
+
+
+                <script>
+        function openModal() {
+            document.getElementById('userModal').style.display = 'block';
+        }
+        
+        function closeModal() {
+            document.getElementById('userModal').style.display = 'none';
+            document.getElementById('userForm').reset();
+        }
+        
+        // Fermer la modale en cliquant à l'extérieur
+        window.onclick = function(event) {
+            var modal = document.getElementById('userModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+        </script>
     </div>
 </body>
 </html>

@@ -15,6 +15,7 @@ class DashboardController extends Controller
         $count = User::count();
         $marquesCount = \App\Models\marque::count(); 
         $marques = marque::all();
-        return view('admin.dashboard', compact('count', 'marquesCount', 'marques'));
+        $categories = \App\Models\Categories::all(); // Récupérer toutes les catégories
+        return view('admin.dashboard', compact('count', 'marquesCount', 'marques', 'categories'));
     }
 }

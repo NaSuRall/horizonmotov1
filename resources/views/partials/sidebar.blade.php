@@ -114,7 +114,7 @@
                     </a>
                 </div>
                 <div class="row">
-                    <a href="">
+                    <a href="{{ route('dashboard.produit') }}">
                         <span class="icon-left"><i class="fa-solid fa-box"></i></span>
                         <span class="label">Produits</span>
                         <span class="icon-right"><i class="fa-solid fa-chevron-right"></i></span>
@@ -128,7 +128,7 @@
                     </a>
                 </div>
                 <div class="row">
-                    <a href="">
+                    <a href="{{ route('dashboard.categorie') }}">
                         <span class="icon-left"><i class="fa-solid fa-th"></i></span>
                         <span class="label">Catégories</span>
                         <span class="icon-right"><i class="fa-solid fa-chevron-right"></i></span>

@@ -12,4 +12,13 @@ class marque extends Model
 
     
     protected $fillable = ['nom', 'description'];
+
+
+
+    public function produits()
+    {
+        return $this->hasMany(Produit::class, 'marque_id');
+    }
+    
+
 }

@@ -9,26 +9,24 @@
     <div class="container">
         <div class="users-table-container">
             <div class="header-section">
-                <h2>Gestion des Marques</h2>
-                <button class="btn btn-add" onclick="openModal()">Ajouter une Marque <i class="fa-solid fa-plus"></i></button>
+                <h2>Gestion des catégories</h2>
+                <button class="btn btn-add" onclick="openModal()">Ajouter une catégorie <i class="fa-solid fa-plus"></i></button>
             </div>
             <table class="users-table">
                 <thead>
                     <tr>
                         <th>Id</th>
                         <th>Nom</th>
-                        <th>Description</th>
                         <th>Options</th>
                     <tbody>
-                        @foreach($marques as $marque)
+                        @foreach($categories as $category)
                         <tr>
-                            <td>{{ $marque->id }}</td>
-                            <td>{{ $marque->nom }}</td>
-                            <td>{{ $marque->description }}</td>
+                            <td>{{ $category->id }}</td>
+                            <td>{{ $category->name }}</td>
                             <td class="options">
-                                
-                                <button class="btn" onclick="openEditModal({{ $marque->id }}, '{{ $marque->nom }}', '{{ $marque->description }}')">Éditer</button>
-                                <form action="{{ route('marque.destroy', $marque->id) }}" method="POST" onsubmit="return confirm('Supprimer cette marque ?')">
+
+                                <button class="btn" onclick="openEditModal({{ $category->id }}, '{{ $category->name }}')">Éditer</button>
+                                <form action="{{ route('categories.destroy', $category->id) }}" method="POST" onsubmit="return confirm('Supprimer cette catégorie ?')">
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn" type="submit">Supprimer</button>
@@ -42,25 +40,21 @@
             </table>
         </div>
 
-                <div id="userModal" class="modal">
+        <!-- Modal pour ajouter un utilisateur -->
+        <div id="userModal" class="modal">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3>Ajouter une Marque</h3>
+                    <h3>Ajouter une nouvelle catégorie</h3>
                     <span class="close" onclick="closeModal()">&times;</span>
                 </div>
-                <form id="userForm" method="POST">
+                <form id="userForm" action="{{ route('categories.store') }}" method="POST">
                     @csrf
                     <input type="hidden" id="methodField" name="_method" value="">
-                    <input type="hidden" id="marqueId" name="marque_id" value="">
+                    <input type="hidden" id="userId" name="user_id" value="">
                     <div class="form-group">
-                        <label for="nom">Nom:</label>
-                        <input type="text" id="nom" name="nom" required>
+                        <label for="name">Nom:</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
-                    <div class="form-group">
-                        <label for="description">Description:</label>
-                        <input type="text" id="description" name="description" required>
-                    </div>
-        
                     <div class="form-actions">
                         <button type="button" class="btn btn-cancel" onclick="closeModal()">Annuler</button>
                         <button type="submit" class="btn btn-submit" id="submitBtn">Créer</button>
@@ -74,26 +68,25 @@
     function openModal() {
         // Mode création
         document.getElementById('userModal').style.display = 'block';
-        document.querySelector('.modal-header h3').textContent = 'Ajouter une Marque';
+        document.querySelector('.modal-header h3').textContent = 'Ajouter une nouvelle catégorie';
         document.getElementById('submitBtn').textContent = 'Créer';
-        document.getElementById('userForm').action = '{{ route("marque.store") }}';
+        document.getElementById('userForm').action = '{{ route("categories.store") }}';
         document.getElementById('methodField').value = '';
-        document.getElementById('marqueId').value = '';
+        document.getElementById('userId').value = '';
         resetForm();
     }
-    
-    function openEditModal(id, nom, description) {
+
+    function openEditModal(id, name) {
         // Mode édition
         document.getElementById('userModal').style.display = 'block';
-        document.querySelector('.modal-header h3').textContent = 'Modifier la marque';
+        document.querySelector('.modal-header h3').textContent = 'Modifier la catégorie';
         document.getElementById('submitBtn').textContent = 'Modifier';
-        document.getElementById('userForm').action = '{{ route("marque.update", ":id") }}'.replace(':id', id);
+        document.getElementById('userForm').action = '{{ route("categories.update", ":id") }}'.replace(':id', id);
         document.getElementById('methodField').value = 'PUT';
-        document.getElementById('marqueId').value = id;
+        document.getElementById('userId').value = id;
         
         // Pré-remplir les champs
-        document.getElementById('nom').value = nom;
-        document.getElementById('description').value = description;
+        document.getElementById('name').value = name;
     }
     
     function closeModal() {
@@ -104,7 +97,7 @@
     function resetForm() {
         document.getElementById('userForm').reset();
         document.getElementById('methodField').value = '';
-        document.getElementById('marqueId').value = '';
+        document.getElementById('userId').value = '';
     }
     
     // Fermer la modale en cliquant à l'extérieur
@@ -117,3 +110,6 @@
     </script>
 
 @endsection
+
+
+

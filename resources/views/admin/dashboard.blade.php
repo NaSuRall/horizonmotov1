@@ -19,8 +19,12 @@
                         <p>{{ $count }} <i class="fa-solid fa-server"></i></p>
                     </div>
                     <div class="dashboard-card">
-                        <h3>Statistique 2</h3>
-                        
+                        <h3>Catégories</h3>
+                        @foreach($categories as $category)
+                        <div class="category-item">
+                            <a href="{{ route('dashboard.categorie', $category->id) }}"> - {{ $category->name }}</a>
+                        </div>
+                        @endforeach
                     </div>
                     <div class="dashboard-card">
                         <h3>Statistique 3</h3>
