@@ -76,3 +76,138 @@
     background: linear-gradient(90deg, #a00 60%, #c00 100%);
     transform: translateY(-2px) scale(1.04);
 }
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.btn-add {
+    background: linear-gradient(90deg, #28a745 60%, #218838 100%);
+    padding: 10px 20px;
+    font-size: 1rem;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+}
+
+.btn-add:hover {
+    background: linear-gradient(90deg, #218838 60%, #28a745 100%);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: var(--bg-tableau);
+    margin: 5% auto;
+    padding: 0;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-bottom: 1px solid var(--text-color);
+}
+
+.modal-header h3 {
+    color: white;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #c00;
+}
+
+#userForm {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--text-color);
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #c00;
+    box-shadow: 0 0 5px rgba(200, 0, 0, 0.3);
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.btn-cancel {
+    background: linear-gradient(90deg, #ffffff 60%, #ffffff 100%);
+    padding: 10px 20px;
+    font-size: 1rem;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+}
+
+.btn-cancel:hover {
+    background: linear-gradient(90deg, #a0a0a0 60%, #ffffff 100%);
+}
+
+.btn-submit {
+    background: linear-gradient(90deg, #c50000 60%, #bb0707 100%);
+    padding: 10px 20px;
+    font-size: 1rem;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    color: white;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(90deg, #c50000 60%, #bb0707 100%);
+}

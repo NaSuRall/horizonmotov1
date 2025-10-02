@@ -13,6 +13,22 @@ class UserController extends Controller
         $users = User::all();
         return view('admin.users', compact('users'));
     }
+    
+
+    public function store(Request $request)
+    {
+       
+        User::create([
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+        ]);
+
+        return redirect()->back();
+    }
+
+
 
     public function destroy($id)
     {
@@ -22,4 +38,7 @@ class UserController extends Controller
 
         return redirect()->back();
     }
+
+
+
 }
