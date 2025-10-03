@@ -45,40 +45,28 @@
         <!-- Section -->
 
         <section id="section">
-        
-            <div class="title-section">
-                 <h2>Nos Equipement moto / Maxxess</h2>
+            
+            <div class="section-body">
+                <div class="card">*
+                    <h3>CASQUE</h3>
+                    <img src="{{ asset('img/site/img1.jpg') }}" alt="">
+                </div>
+
+                 <div class="card">
+                    <h3>GANTS</h3>
+                    <img src="{{ asset('img/site/img2.jpg') }}" alt="">
+                </div>
+
+                 <div class="card">
+                    <h3>PROTECTIONS</h3>
+                    <img src="{{ asset('img/site/img3.jpg') }}" alt="">
+                </div>
+
+                 <div class="card">
+                    <h3>ACCESSOIRES</h3>
+                    <img src="{{ asset('img/site/img4.jpg') }}" alt="">
+                </div>
             </div>
-            <div class="fondu"></div>
-            <div class="card-section">
-                
-
-                
-                
-
-
-
-
-
-                <div class="card">
-                    <!-- Foreach card / Equipement bdd  juste les 5 premiers et un button voir plus pour voir tout les equipements en entier trier -->
-                </div>
-
-                <div class="card">
-                    <!-- Foreach card / Equipement bdd  juste les 5 premiers et un button voir plus pour voir tout les equipements en entier trier -->
-                </div>
-
-                <div class="card">
-                    <!-- Foreach card / Equipement bdd  juste les 5 premiers et un button voir plus pour voir tout les equipements en entier trier -->
-                </div>
-                <div class="card">
-                    <!-- Foreach card / Equipement bdd  juste les 5 premiers et un button voir plus pour voir tout les equipements en entier trier -->
-                </div>
-
-                <a href="" class="seemore">Voir plus <i class="fa-solid fa-chevron-right"></i></a>
-
-            </div>
-
 
         </section>
 
